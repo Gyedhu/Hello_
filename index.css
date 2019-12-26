@@ -1,0 +1,194 @@
+body {
+    background-color: white;
+    background: url("gameBoard.jpg") no-repeat center center fixed;
+    background-size: cover; 
+}
+
+.header {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: "Lilita One";
+    font-variant: small-caps;
+    text-shadow: 10px 2px 5px rgb(0, 0, 0);
+}
+
+.yedGame {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: rgb(152, 252, 255);
+    width: 400px;
+    height: 400px; 
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 6px 6px 15px 5px rgb(0, 0, 0);
+}
+.gameStatus {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 26%;
+    overflow: hidden;
+    box-shadow: 6px 6px 15px 7px rgb(0, 0, 0);
+    font-family: Shojumaru;
+    position: relative;
+}
+
+.statusBar {
+    background-color: rgb(255, 237, 134);
+    height: 40px;
+}
+
+.gameData {
+    display: grid;
+    grid-gap: 1px;
+    padding: 1px;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(162, 162, 162);
+    color: rgb(108, 108, 108);
+}
+
+.gameData > * {
+    background-color: white;
+    padding: 10px;
+    font-family: Shojumaru;
+    font-size: 25px;
+}
+
+.controlButtons > input {
+    flex: 1;
+    color: white;
+    border: 0;
+    padding: 13px;
+    font-family: Shojumaru;
+}
+
+.controlButtons {
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#playButton {
+    background-color: rgba(0, 128, 0, 0.561);
+}
+
+#resetButton {
+    background-color: rgb(120, 120, 255);
+}
+
+.hole {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.gameOver {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    .header {
+        font-size: 30px;
+    }
+
+    .yedGame {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .gameBoard {
+        width: 450px;
+        height: 450px;
+    }
+
+    .gameStatus {
+        width: 450px;
+        height: 200px;
+    }
+
+    .gameData > *{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .yedGame {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .gameBoard {
+        width: 350px;
+        height: 350px;
+    }
+
+    .gameStatus {
+        width: 350px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        font-size: 20px;
+    }
+
+    .yedGame {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .gameBoard {
+        width: 250px;
+        height: 250px;
+    }
+
+    .gameStatus {
+        width: 250px;
+        height: 200px;
+    }
+
+    .gameOver {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .header {
+        font-size: 15px;
+    }
+
+    .yedGame {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .gameBoard {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gameStatus {
+        width:  150px;
+        height: 200px;
+    }
+
+    .gameOver {
+        font-size: 20px;
+    }
+}
